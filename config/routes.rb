@@ -5,11 +5,13 @@ Rails.application.routes.draw do
 
   resources :photos do
     resources :comments
+    resource :like
   end
 
   resources :users do
     resource :follow
     resources :followers
     resources :followings
+    resources :likes
   end
 end
